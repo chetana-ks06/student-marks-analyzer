@@ -9,7 +9,7 @@ public class StudentMarksAnalyzer {
 
         int sum=0;
         double average;
-        int highest = marks[0];
+        int highest = Integer.MIN_VALUE;
         int lowest =  Integer.MAX_VALUE;
         int passed =0;
         int failed=0;
@@ -28,7 +28,7 @@ public class StudentMarksAnalyzer {
             if(marks[i]>=35){
                 passed++;
             }
-            if(marks[i]<35){
+            else{
                 failed++;
             }
 
@@ -40,6 +40,8 @@ public class StudentMarksAnalyzer {
         System.out.println("Lowest Mark : " + lowest );
         System.out.println("Passed Students :" + passed);
         System.out.println("Failed Students:" + failed);
+
+        sc.close();
     }
 
 }
